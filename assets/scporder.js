@@ -27,5 +27,31 @@
 		});
 		return ui;
 	};
+
+	 /****
+	 * Fix for table breaking
+     */
+
+    $('#the-list').on('mousedown',function(){
+        jQuery('#the-list').parent().find('thead').find('th').each(function(){
+            $(this).width($(this).width())
+        });
+        jQuery('#the-list').find('td').each(function(){
+            $(this).width($(this).width())
+        });
+    });
+
+    $('#the-list').on('mouseup',function(){
+        jQuery('#the-list').parent().find('thead').find('th').each(function(){
+            $(this).removeAttr('style');
+        });
+        jQuery('#the-list').find('td').each(function(){
+            $(this).removeAttr('style');
+        });
+    });
+
+    /*****
+	 *  End table breaking fix
+     */
 	
 })(jQuery) 

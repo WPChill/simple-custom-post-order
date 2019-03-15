@@ -2,7 +2,7 @@
 Contributors: colorlibplugins, silkalns
 Tags: custom post order, post order, js post order, page order, posts order, category order, sort posts, sort pages, sort custom posts
 Requires at least: 3.5.1
-Tested up to: 5.0.3
+Tested up to: 5.1
 Stable tag: 2.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -37,6 +37,7 @@ An answer to that question.
 
 = Version 2.4.2 =
 * Fixed potential bug with other plugins
+* Fixed table breaking on re-ordering when Yoast SEO installed
 
 = Version 2.4.1 =
 * Fixed translations
