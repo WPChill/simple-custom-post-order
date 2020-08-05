@@ -3,7 +3,7 @@ Contributors: silkalns
 Tags: custom post order, post order, js post order, page order, posts order, category order, sort posts, sort pages, sort custom posts
 Requires at least: 4.6
 Requires PHP: 5.6
-Tested up to: 5.4
+Tested up to: 5.5
 Stable tag: 2.5.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
