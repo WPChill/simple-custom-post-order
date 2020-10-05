@@ -31,7 +31,7 @@
     /****
      * Fix for table breaking
      */
-    jQuery(window).on( 'load', (function () {
+    jQuery(window).on( 'load', function () {
 
         // make the array for the sizes
         var td_array = new Array();
