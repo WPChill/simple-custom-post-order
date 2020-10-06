@@ -641,6 +641,14 @@ class SCPO_Engine {
 
             $result = $wpdb->query($prep_posts_query);
 
+            $scpo_options = get_option( 'scporder_options' );
+
+            if ( !false == $scpo_options ) {
+
+                $scpo_options = array_diff( $scpo_options['objects'], $items );
+                update_option( 'scporder_options',  $scpo_options );
+            }
+
             if ($result) {
                 echo 'Items have been reset';
             } else {
