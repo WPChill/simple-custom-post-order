@@ -36,6 +36,10 @@ An answer to that question.
 
 == Changelog ==
 
+= Version 2.5.2 =
+* Modified deprecated JQuery function to improve compatibility with Wordpress 5.5
+* Fixed an issue where posts would be in reverse order after resetting the order
+
 = Version 2.5.1 =
 * Improve fix for post list table width when sorting is enabled ( thanks to gedeminas )
 * Fix for admin ajax overriding queries ( thanks to igritsay )
