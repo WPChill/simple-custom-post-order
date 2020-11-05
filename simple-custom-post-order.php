@@ -645,7 +645,7 @@ class SCPO_Engine {
 
             if ( !false == $scpo_options ) {
 
-                $scpo_options = array_diff( $scpo_options['objects'], $items );
+	            $scpo_options['objects'] = array_diff( $scpo_options['objects'], $items );
                 update_option( 'scporder_options',  $scpo_options );
             }
 
