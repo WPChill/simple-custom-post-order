@@ -1,4 +1,4 @@
-jQuery( document ).ready( function( $ )
+jQuery( document ).on('ready', function( $ )
 {
 	// if it is taxonomy page
 	if( adminpage == 'edit-tags-php' )
