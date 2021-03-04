@@ -36,6 +36,9 @@ An answer to that question.
 
 == Changelog ==
 
+= Version 2.5.4 =
+* Improved Performance ( https://github.com/ColorlibHQ/simple-custom-post-order/issues/105 )
+
 = Version 2.5.3 =
 * Modified deprecated jQuery functions.
 
