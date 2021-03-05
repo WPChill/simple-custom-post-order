@@ -36,7 +36,7 @@
 
 define('SCPORDER_URL', plugins_url('', __FILE__));
 define('SCPORDER_DIR', plugin_dir_path(__FILE__));
-define('SCPORDER_VERSION', '2.5.3');
+define('SCPORDER_VERSION', '2.5.4');
 
 $scporder = new SCPO_Engine();
 

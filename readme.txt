@@ -4,7 +4,7 @@ Tags: custom post order, post order, js post order, page order, posts order, cat
 Requires at least: 4.6
 Requires PHP: 5.6
 Tested up to: 5.6
-Stable tag: 2.5.3
+Stable tag: 2.5.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -36,8 +36,8 @@ An answer to that question.
 
 == Changelog ==
 
-= Version 2.5.4 =
-* Improved Performance ( https://github.com/ColorlibHQ/simple-custom-post-order/issues/105 )
+= Version 2.5.4 - 05.03.2021 =
+Changed: Improved Performance ( https://github.com/ColorlibHQ/simple-custom-post-order/issues/105 )
 
 = Version 2.5.3 =
 * Modified deprecated jQuery functions.
