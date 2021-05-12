@@ -36,6 +36,10 @@ An answer to that question.
 
 == Changelog ==
 
+= Version 2.5.5 - 11.05.2021 =
+Changed : Code Cleaning
+Changed : Allow custom orderbu in Block Preview ( https://github.com/ColorlibHQ/simple-custom-post-order/issues/98 )
+
 = Version 2.5.4 - 05.03.2021 =
 Changed: Improved Performance ( https://github.com/ColorlibHQ/simple-custom-post-order/issues/105 )
 

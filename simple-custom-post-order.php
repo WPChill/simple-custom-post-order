@@ -533,7 +533,7 @@ class SCPO_Engine {
 		}
 		if ( is_admin() && ! wp_doing_ajax() ) {
 
-			if ( isset( $wp_query->query['post_type'] ) && ! isset( $_GET['orderby'] ) ) {
+			if ( isset( $wp_query->query['post_type'] ) && ! isset( $wp_query->query['orderby'] ) ) {
 				if ( in_array( $wp_query->query['post_type'], $objects ) ) {
 					if ( ! $wp_query->get( 'orderby' ) ) {
 						$wp_query->set( 'orderby', 'menu_order' );
