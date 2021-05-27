@@ -36,7 +36,7 @@ An answer to that question.
 
 == Changelog ==
 = Version 2.5.6 - 27.05.2021 =
-Changed : Allow custom orderby in Block Preview ( https://github.com/ColorlibHQ/simple-custom-post-order/issues/98 )
+Changed : Revert to 2.5.4
 
 = Version 2.5.5 - 11.05.2021 =
 Changed : Code Cleaning
