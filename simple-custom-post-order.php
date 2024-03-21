@@ -15,7 +15,9 @@
  * Domain Path: /languages
  *
  * Copyright 2013-2017 Sameer Humagain im@hsameer.com.np
+
  * Copyright 2017-2023 Colorlib support@colorlib.com
+
  *
  * SVN commit with ownership change: https://plugins.trac.wordpress.org/changeset/1590135/simple-custom-post-order
  *
@@ -338,6 +340,7 @@ class SCPO_Engine {
 
 		$menu_order_arr = array();
 		foreach ( $id_arr as $key => $id ) {
+
 			$id = intval( $id ); // Nettoyage variable ID
 
 			$results = $wpdb->get_results( $wpdb->prepare( "SELECT menu_order FROM $wpdb->posts WHERE ID = %d", $id ) ); //Passage en requette préparée
@@ -412,9 +415,7 @@ class SCPO_Engine {
 
 	}
 
-
 	//TODO corrigé
-
 	public function update_options() {
 		global $wpdb;
 
@@ -429,7 +430,6 @@ class SCPO_Engine {
 		$input_options['tags']               = isset( $_POST['tags'] ) ? $_POST['tags'] : '';
 		$input_options['show_advanced_view'] = isset( $_POST['show_advanced_view'] ) ? $_POST['show_advanced_view'] : '';
 
-
 		update_option( 'scporder_options', $input_options );
 
 		$objects = $this->get_scporder_options_objects();
@@ -437,7 +437,6 @@ class SCPO_Engine {
 
 		if ( ! empty( $objects ) ) {
 			foreach ( $objects as $object ) {
-
 				$object = sanitize_text_field( $object ); // Nettoyage de la variable
 
 				$result = $wpdb->get_results(
@@ -448,7 +447,6 @@ class SCPO_Engine {
 						$object
 					)
 				); // Passage en requette préparée
-
 
 				if ( $result[0]->cnt == 0 || $result[0]->cnt == $result[0]->max ) {
 					continue;
@@ -634,7 +632,6 @@ class SCPO_Engine {
 		}
 	}
 
-
 	public function scporder_get_terms_orderby( $orderby, $args ) {
 
 		if ( is_admin() && ! wp_doing_ajax() ) {
@@ -682,13 +679,11 @@ class SCPO_Engine {
 				return $terms;
 			}
 		}
-
 		if ( is_array( $terms ) ) {
 			usort( $terms, array( $this, 'taxcmp' ) );
 		}
 		return $terms;
 	}
-
 
 	public function taxcmp( $a, $b ) {
 		if ( $a->term_order == $b->term_order ) {
@@ -720,8 +715,8 @@ class SCPO_Engine {
 		global $wpdb;
 		if ( 'scpo_reset_order' == $_POST['action'] ) {
 			check_ajax_referer( 'scpo-reset-order', 'scpo_security' );
-			$items = isset( $_POST['items'] ) ? $_POST['items'] : array(); // Nettoyage et verification de la variable
 
+			$items = isset( $_POST['items'] ) ? $_POST['items'] : array(); // Nettoyage et verification de la variable
 			$count   = 0;
 			$in_list = '(';
 			foreach ( $items as $item ) {
@@ -730,6 +725,7 @@ class SCPO_Engine {
 					$in_list .= ',';
 				}
 				$in_list .= $wpdb->prepare( '%s', $item );
+
 				$count++;
 			}
 			$in_list .= ')';
@@ -764,8 +760,6 @@ class SCPO_Engine {
 	 *
 	 * @since 2.5.4
 	 */
-
-
 	public function print_scpo_style() {
 		?>
 		<style>
@@ -787,7 +781,6 @@ class SCPO_Engine {
 
 }
 
-
 function scporder_doing_ajax() {
 
 	if ( function_exists( 'wp_doing_ajax' ) ) {
@@ -797,7 +790,6 @@ function scporder_doing_ajax() {
 	if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
 		return true;
 	}
-
 	return false;
 
 }
@@ -805,8 +797,6 @@ function scporder_doing_ajax() {
 /**
  * SCP Order Uninstall hook
  */
-
- 
 register_uninstall_hook( __FILE__, 'scporder_uninstall' );
 
 function scporder_uninstall() {
